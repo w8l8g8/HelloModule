@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>page1</title>
+    <link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.5.2/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../js/jquery-easyui-1.5.2/themes/icon.css">
+    <script src="../js/jquery-easyui-1.5.2/jquery.min.js"></script>
+    <script src="../js/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+    <script src="../js/jquery-easyui-1.5.2/locale/easyui-lang-zh_CN.js"></script>
+    <script src="../js/jquery-easyui-1.5.2/plugins/jquery.validatebox.js"></script>
+</head>
+
+<body>
+    <div>
+        <form id "form1" method="POST">
+            <input type="text" id="user" name="user" value="Jerry" />
+            <input type="text" id="age" name="age" value="98" />
+            <input type="submit" id="confirm" value="submit" />
+        </form>
+    </div>
+    <h2>Create Dialog</h2>
+    <div id="dd" class="easyui-dialog" style="padding:5px;width:400px;height:200px;" title="My Dialog" iconCls="icon-ok" toolbar="#dlg-toolbar"
+        buttons="#dlg-buttons">
+        Dialog Content.
+    </div>
+    <div id="dlg-toolbar">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:alert('Add')">Add</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="javascript:alert('Save')">Save</a>
+    </div>
+    <div id="dlg-buttons">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="javascript:alert('Ok')">Ok</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dd').dialog('close')">Cancel</a>
+    </div>
+
+    <script>
+        var btn1 = document.getElementById("confirm");
+        btn1.onclick = function () {
+            alert(user.value);
+            alert(this.value)
+        }
+    </script>
+</body>
+
+</html>
