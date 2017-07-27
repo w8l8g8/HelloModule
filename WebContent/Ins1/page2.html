@@ -17,12 +17,26 @@
     <p id="div1">test text</p>
     <p id="div2">test text2</p>
 
-    <input type="button" name="btn1" value="push" onclick="alert($('#div1').text())">
+    <input type="button" name="btn1" value="push" onclick="alert(this.value)">
+        <h2>Create Dialog</h2>
+    <div id="dd" class="easyui-dialog" style="padding:5px;width:400px;height:200px;" title="My Dialog" iconCls="icon-ok" toolbar="#dlg-toolbar"
+        buttons="#dlg-buttons">
+        Dialog Content.
+    </div>
+    <div id="dlg-toolbar">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="javascript:alert('Add')">Add</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-save" plain="true" onclick="javascript:alert('Save')">Save</a>
+    </div>
+    <div id="dlg-buttons">
+        <a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="javascript:alert('Ok')">Ok</a>
+        <a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dd').dialog('close')">Cancel</a>
+    </div>
+    
 </body>
  <script>
     $(document).ready(function(){
-        alert($("#div1").text());
-        alert($("p")[1].text());
+        //alert($("#div1").text());
+        alert($("p").eq(1).text());
     });
 </script> 
 </html>

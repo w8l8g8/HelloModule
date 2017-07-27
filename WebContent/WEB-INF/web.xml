@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app 
-  xmlns="http://java.sun.com/xml/ns/javaee" 
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                       http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
   <display-name>Yuhonglei Learn Application</display-name>
   <icon>
     <small-icon>/images/app_small.gif</small-icon>
@@ -16,4 +14,23 @@
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>com.xajiusuo.test.HelloServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SaveUser</servlet-name>
+    <servlet-class>com.xajiusuo.test.SaveServlet</servlet-class>
+    <init-param>
+      <param-name>developer</param-name>
+      <param-value>Yu Honglei</param-value>
+    </init-param>
+  </servlet>
+  <context-param>
+    <param-name>breed</param-name>
+    <param-value>shery</param-value>
+  </context-param>
+  <listener>
+    <listener-class>com.xajiusuo.test.MyServletContextListener</listener-class>
+  </listener>
 </web-app>
