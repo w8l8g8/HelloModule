@@ -8,29 +8,29 @@
   <description>
     my learning phase in company;
   </description>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.xhtml</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-  </welcome-file-list>
-  <servlet>
+<!--   <servlet>
     <servlet-name>Hello</servlet-name>
     <servlet-class>com.xajiusuo.test.HelloServlet</servlet-class>
-  </servlet>
-  <servlet>
+  </servlet> -->
+<!--   <servlet>
     <servlet-name>SaveUser</servlet-name>
     <servlet-class>com.xajiusuo.test.SaveServlet</servlet-class>
     <init-param>
       <param-name>developer</param-name>
       <param-value>Yu Honglei</param-value>
     </init-param>
-  </servlet>
+  </servlet> -->
+<!--   <listener>
+    <listener-class>com.xajiusuo.test.MyServletContextListener</listener-class>
+  </listener> -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.xhtml</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
   <context-param>
     <param-name>breed</param-name>
     <param-value>shery</param-value>
   </context-param>
-  <listener>
-    <listener-class>com.xajiusuo.test.MyServletContextListener</listener-class>
-  </listener>
 </web-app>

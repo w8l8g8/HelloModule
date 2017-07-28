@@ -5,7 +5,7 @@ import javax.servlet.http.HttpSessionBindingEvent;
 import javax.servlet.http.HttpSessionBindingListener;
 
 /**
- * Application Lifecycle Listener implementation class Doge
+ * Application Lifecycle Listener implementation class Dog
  *
  */
 @WebListener
@@ -20,6 +20,10 @@ public class Dog implements HttpSessionBindingListener {
 		this.breed = breed;
 	}
 
+	public Dog() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	/**
      * @see HttpSessionBindingListener#valueBound(HttpSessionBindingEvent)
      */
