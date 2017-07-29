@@ -35,8 +35,8 @@ public class SaveServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
-//		response.setHeader("Encoding", "utf-8");
+		response.setContentType("text/html;charset=UTF-8");
+//		response.setHeader("Encoding", "UTF-8");
 		PrintWriter out = response.getWriter();
 		String name = request.getParameter("user");
 		out.println("中文显示正常" + "<br>");
@@ -46,8 +46,13 @@ public class SaveServlet extends HttpServlet {
 		out.println("User age is: " + age + " ");
 		YoungModel youngModel = new YoungModel();
 		out.println(youngModel.young(age) + "<br>");
-		String[] interest = request.getParameterValues("interest");
-		out.println("Your interests are: " + interest[0] + " " + interest[1] + "<br>");
+		String[] interests = request.getParameterValues("interest");
+		out.println("Your interests are: ");
+		for (int i = 0; i < interests.length; i++) {
+			String interest = interests[i];
+			out.println(interest);
+		}
+		out.println("<br>");
 	}
 
 }
